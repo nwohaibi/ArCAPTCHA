@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="changeme" default="all" basedir=".">
+    <target name="all">
+        <jar destfile="MyApplication.jar">
+          <zipgroupfileset dir="dist" includes="*.jar" /> 
+          <!-- other options -->
+          <manifest>
+            <attribute name="Main-Class" value="Main.MainClass" />
+          </manifest>
+        </jar>
+    </target>
+</project>
