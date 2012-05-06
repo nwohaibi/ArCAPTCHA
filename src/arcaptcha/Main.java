@@ -25,8 +25,11 @@ public class Main extends PApplet
 {
   //Captcha cptsh ;//testing
   // setting the size of the program to be smaller by 10% from the screen size.
-  int programWidth = screen.width-(int)(screen.width*0.1);
-  int programHeight = screen.height-(int)(screen.height*0.2);
+    // uncomment the following if standalone program
+//  int programWidth = screen.width-(int)(screen.width*0.1);
+//  int programHeight = screen.height-(int)(screen.height*0.2);
+  int programWidth = 1100;
+  int programHeight = 600;
   // setting the size of the "left panel" to be 20% of the applet size
   int leftPanelSize = programWidth-(int)(programWidth*0.78);
   int leftPanelStarting = programWidth-(int)(programWidth*0.22);
@@ -83,7 +86,7 @@ public class Main extends PApplet
   // main GUI object from controlP5
   ControlP5 controlP5;
 //------------------------------------------------------------------------------
-private void initLeftPanel()
+public void initLeftPanel()
 {
 
 
@@ -694,7 +697,9 @@ public void updateSample()
 @Override
   public void setup()
   {
-    frame.setResizable(true);
+    System.err.println("tetete");
+    if(frame != null) // it's null when being an applet
+    {frame.setResizable(true);} 
     size(programWidth, programHeight);
 
     noStroke();
@@ -727,7 +732,10 @@ public void updateSample()
     fill(140);
     
     //	rect(x, y, width, height)
-    rect(leftPanelStarting,0,leftPanelSize,frame.getHeight());
+    if(frame != null) // it's null when being an applet
+    {rect(leftPanelStarting,0,leftPanelSize,frame.getHeight());}
+    else
+    {rect(leftPanelStarting,0,leftPanelSize,programHeight);}
     fill(255);
     if(realtimeFlag == true)
     {
