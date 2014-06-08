@@ -20,3 +20,13 @@ Arabic CAPTCHA random generator. Based on Java and Processing.org.
 
 ###### Download Excutable JAR (no need to install). To run, you need at least Java 1.7:
 [https://s3-eu-west-1.amazonaws.com/arcaptcha/ArCaptcha.zip](https://s3-eu-west-1.amazonaws.com/arcaptcha/ArCaptcha.zip)
+
+---
+
+contacts:
+
+Nasser Al-Wohaibi
+
+[http://nasser.wohaibi.co](http://nasser.wohaibi.co)
+
+[http://sa.linkedin.com/in/nasserw/](http://sa.linkedin.com/in/nasserw/)
